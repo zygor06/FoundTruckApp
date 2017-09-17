@@ -1,4 +1,4 @@
-package foundtruck.com.br.foundtruck.activity;
+package foundtruck.com.br.foundtruck.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,21 +14,22 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.lang.reflect.Field;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import foundtruck.com.br.foundtruck.R;
 import foundtruck.com.br.foundtruck.fragment.PesquisaFragment;
 
 public class InicioActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+    private Unbinder unbinder;
+
     @BindView(R.id.bottom_navigation)
-    BottomNavigationView bottomNavigation;
+    BottomNavigationView navigation;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -69,15 +70,18 @@ public class InicioActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
-        ButterKnife.bind(this);
-
+        unbinder = ButterKnife.bind(this);
         getTransaction().replace(R.id.content, new PesquisaFragment()).commit();
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         disableShiftMode(navigation);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 
     private void disableShiftMode(BottomNavigationView view) {
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);

@@ -1,10 +1,11 @@
-package foundtruck.com.br.foundtruck.activity;
+package foundtruck.com.br.foundtruck.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import butterknife.BindView;
@@ -29,12 +30,16 @@ public class LoginActivity extends AppCompatActivity implements FontInteface {
     TextView tvNaoPossuiConta;
     @BindView(R.id.btn_criar_conta)
     Button btnCriarConta;
+    @BindView(R.id.btn_facebook)
+    ImageButton btnFacebook;
+    @BindView(R.id.btn_google_plus)
+    ImageButton btnGooglePlus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         setFonts();
     }
 
@@ -52,7 +57,7 @@ public class LoginActivity extends AppCompatActivity implements FontInteface {
         tvNaoPossuiConta.setTypeface(new Fonts(this).menuRegular());
     }
 
-    @OnClick(R.id.btn_login)
+    @OnClick({R.id.btn_login, R.id.btn_facebook, R.id.btn_google_plus})
     public void login(){
         startActivity(new Intent(getApplicationContext(), InicioActivity.class));
     }

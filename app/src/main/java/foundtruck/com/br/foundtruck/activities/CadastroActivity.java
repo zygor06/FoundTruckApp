@@ -1,4 +1,4 @@
-package foundtruck.com.br.foundtruck.activity;
+package foundtruck.com.br.foundtruck.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -48,5 +48,6 @@ public class CadastroActivity extends AppCompatActivity implements FontInteface{
         editEmail.setTypeface(new Fonts(this).menuRegular());
         editSenha.setTypeface(new Fonts(this).menuRegular());
         textoCadastro.setTypeface(new Fonts(this).chalkboardRegular());
+        btnCadastrar.setTypeface( new Fonts(this).signatureRegular());
     }
 }

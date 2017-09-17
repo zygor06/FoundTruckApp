@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="foundtruck.com.br.foundtruck.activity.CadastroActivity"
+    tools:context="foundtruck.com.br.foundtruck.activities.CadastroActivity"
     tools:layout_editor_absoluteY="25dp"
     tools:layout_editor_absoluteX="0dp">
 
@@ -175,7 +175,7 @@
         android:drawablePadding="@dimen/pd_icon_right"
         android:ems="10"
         android:hint="@string/cadastro_nome"
-        android:inputType="textEmailAddress"
+        android:inputType="text|textEmailAddress"
         android:paddingLeft="20dp"
         android:paddingStart="@dimen/pd_start_input"
         android:textColor="@color/darker"
