@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         unbinder.unbind();
     }
 
-    // Método para disabilitar o ShiftMode da ButtomNavigationView
+    // Método para disabilitar o ShiftMode da ButtomNavigationView *
     private void disableShiftMode(BottomNavigationView view) {
         BottomNavigationMenuView menuView = (BottomNavigationMenuView) view.getChildAt(0);
         try {
