@@ -24,4 +24,5 @@
     <string name="cadastro_btn">Cadastrar</string>
     <string name="cadastro_texto">ENCONTRAR UM FOOD TRUCK NUNCA FOI TÃO FÁCIL !</string>
     <string name="title_activity_test">test</string>
+    <string name="txt_favoritos">MEUS FAVORITOS</string>
 </resources>

@@ -4,10 +4,10 @@
     android:id="@+id/fragment_pesquisa"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="foundtruck.com.br.foundtruck.fragment.PesquisaFragment">
+    tools:context="foundtruck.com.br.foundtruck.fragments.PesquisaFragment">
 
     <android.support.constraint.Guideline
-        android:id="@+id/v_96"
+        android:id="@+id/v_16dp_end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -37,7 +37,7 @@
         app:layout_constraintGuide_percent="0.83" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/v_4"
+        android:id="@+id/v_16dp_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -64,7 +64,7 @@
         tools:layout_editor_absoluteX="0dp" />
 
     <android.support.constraint.Guideline
-        android:id="@+id/h_33"
+        android:id="@+id/h_36"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -119,16 +119,16 @@
         app:srcCompat="@drawable/logo"
         app:layout_constraintTop_toTopOf="@+id/h_23"
         android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/h_33"
-        app:layout_constraintLeft_toLeftOf="@+id/v_4"
+        app:layout_constraintBottom_toTopOf="@+id/h_36"
+        app:layout_constraintLeft_toLeftOf="@+id/v_16dp_start"
         app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintRight_toLeftOf="@+id/v_96" />
+        app:layout_constraintRight_toLeftOf="@+id/v_16dp_end" />
 
     <EditText
         android:id="@+id/edit_pesquisa"
         android:layout_width="0dp"
         android:layout_height="@dimen/input_height"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -146,8 +146,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/h_67"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/v_4"
-        app:layout_constraintRight_toLeftOf="@+id/v_80" />
+        app:layout_constraintLeft_toLeftOf="@+id/v_16dp_start"
+        app:layout_constraintRight_toLeftOf="@+id/v_80"
+        app:layout_constraintTop_toTopOf="@+id/h_57"
+        android:layout_marginTop="0dp" />
 
     <TextView
         android:id="@+id/txt_pesquisa_encontre"
@@ -162,8 +164,8 @@
         android:textColor="@color/grey"
         android:textSize="@dimen/text_14sp"
         app:layout_constraintBottom_toTopOf="@+id/h_96"
-        app:layout_constraintLeft_toLeftOf="@+id/v_4"
-        app:layout_constraintRight_toLeftOf="@+id/v_96"
+        app:layout_constraintLeft_toLeftOf="@+id/v_16dp_start"
+        app:layout_constraintRight_toLeftOf="@+id/v_16dp_end"
         app:layout_constraintTop_toTopOf="@+id/guideline"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -191,18 +193,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="0dp"
         android:layout_marginLeft="0dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
         android:background="@color/colorPrimary"
         app:backgroundTint="@color/colorPrimary"
         app:elevation="6dp"
         app:fabSize="mini"
         app:layout_constraintBottom_toTopOf="@+id/h_67"
         app:layout_constraintLeft_toLeftOf="@+id/v_80"
-        app:layout_constraintRight_toLeftOf="@+id/v_96"
+        app:layout_constraintRight_toLeftOf="@+id/v_16dp_end"
+        app:srcCompat="@drawable/vtr_search"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintTop_toTopOf="@+id/h_57"
-        app:srcCompat="@drawable/vtr_search" />
+        android:layout_marginTop="0dp"
+        app:layout_constraintVertical_bias="0.529" />
 
 </android.support.constraint.ConstraintLayout>
