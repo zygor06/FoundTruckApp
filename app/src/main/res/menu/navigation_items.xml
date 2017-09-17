@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/action_search"
+        android:title="@string/menu_procurar"
+        android:icon="@drawable/vtr_search"
+        />
+    <item android:id="@+id/action_favoritos"
+        android:title="@string/menu_favoritos"
+        android:icon="@drawable/vtr_heart"/>
+    <item android:id="@+id/action_foodtrucks"
+        android:title="@string/menu_foodtrucks"
+        android:icon="@drawable/vtr_checkmark"/>
+    <item android:id="@+id/action_locais"
+        android:title="@string/menu_locais"
+        android:icon="@drawable/vtr_location_pin" />
+</menu>
