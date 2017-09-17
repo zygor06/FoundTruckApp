@@ -60,12 +60,13 @@ public class LoginActivity extends AppCompatActivity implements FontInteface {
     @OnClick({R.id.btn_login, R.id.btn_facebook, R.id.btn_google_plus})
     public void login(){
         startActivity(new Intent(getApplicationContext(), InicioActivity.class));
+        this.overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom);
+        finish();
     }
 
     @OnClick(R.id.btn_criar_conta)
     public void criarConta(){
         startActivity(new Intent(getApplicationContext(), CadastroActivity.class));
+        this.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_left);
     }
-
-
 }

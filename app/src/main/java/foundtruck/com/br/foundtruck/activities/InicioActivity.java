@@ -7,10 +7,10 @@ import android.support.design.internal.BottomNavigationMenuView;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,7 +22,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import foundtruck.com.br.foundtruck.R;
-import foundtruck.com.br.foundtruck.fragment.PesquisaFragment;
+import foundtruck.com.br.foundtruck.fragments.FavoritosFragment;
+import foundtruck.com.br.foundtruck.fragments.PesquisaFragment;
 
 public class InicioActivity extends AppCompatActivity {
 
@@ -30,6 +31,8 @@ public class InicioActivity extends AppCompatActivity {
 
     @BindView(R.id.bottom_navigation)
     BottomNavigationView navigation;
+    @BindView(R.id.toolbar_inicio)
+    Toolbar toolbar;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -39,16 +42,19 @@ public class InicioActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.action_search:
+                    toolbar.setNavigationIcon(null);
                     getTransaction().replace(R.id.content, new PesquisaFragment()).commit();
-                    Toast.makeText(getApplicationContext(), "Pesquisar", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_favoritos:
-                    Toast.makeText(getApplicationContext(), "Favoritos", Toast.LENGTH_SHORT).show();
+                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+                    getTransaction().replace(R.id.content, new FavoritosFragment()).commit();
                     return true;
                 case R.id.action_foodtrucks:
+                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
                     Toast.makeText(getApplicationContext(), "Foodtrucks", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_locais:
+                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
                     Toast.makeText(getApplicationContext(), "Locais", Toast.LENGTH_SHORT).show();
                     return true;
             }
@@ -57,22 +63,14 @@ public class InicioActivity extends AppCompatActivity {
 
     };
 
-
-    @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        super.onPrepareOptionsMenu(menu);
-        menu.findItem(R.id.action_search).setChecked(true);
-        return true;
-    }
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio);
         unbinder = ButterKnife.bind(this);
+        setToolbar();
+        toolbar.setNavigationIcon(null);
         getTransaction().replace(R.id.content, new PesquisaFragment()).commit();
-
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         disableShiftMode(navigation);
     }
@@ -119,5 +117,11 @@ public class InicioActivity extends AppCompatActivity {
 
     private FragmentTransaction getTransaction(){
         return getSupportFragmentManager().beginTransaction();
+    }
+
+    public void setToolbar(){
+        setSupportActionBar(toolbar);
+        toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
 }
