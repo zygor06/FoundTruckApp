@@ -22,7 +22,9 @@ public class Fonts extends AppCompatActivity {
     public static final String OUTLINE_REGULAR = 	"fonts/FoodTruckOutline-Regular.ttf";
     public static final String SIGNATURE_ITALIC = 	"fonts/FoodTruckSignage-Italic.ttf";
     public static final String SIGNATURE_REGULAR = 	"fonts/FoodTruckSignage-Regular.ttf";
-    public static final String ROBOTO_REGULAR = 	"fonts/Roboto-Light.ttf";
+    public static final String ROBOTO_REGULAR = 	"fonts/Roboto-Regular.ttf";
+    public static final String ROBOTO_LIGHT = 	    "fonts/Roboto-Light.ttf";
+    public static final String ROBOTO_BOLD = 	    "fonts/Roboto-Bold.ttf";
 
     private Typeface FONT_BLOATED;
     private Typeface FONT_CHALKBOARD_ITALIC;
@@ -35,6 +37,8 @@ public class Fonts extends AppCompatActivity {
     private Typeface FONT_SIGNATURE_ITALIC	;
     private Typeface FONT_SIGNATURE_REGULAR;
     private Typeface FONT_ROBOTO_REGULAR;
+    private Typeface FONT_ROBOTO_LIGHT;
+    private Typeface FONT_ROBOTO_BOLD;
 
 
 
@@ -51,6 +55,8 @@ public class Fonts extends AppCompatActivity {
         this.FONT_SIGNATURE_ITALIC	= Typeface.createFromAsset(context.getAssets(), SIGNATURE_ITALIC);
         this.FONT_SIGNATURE_REGULAR	= Typeface.createFromAsset(context.getAssets(), SIGNATURE_REGULAR);
         this.FONT_ROBOTO_REGULAR    = Typeface.createFromAsset(context.getAssets(), ROBOTO_REGULAR);
+        this.FONT_ROBOTO_LIGHT    = Typeface.createFromAsset(context.getAssets(), ROBOTO_LIGHT);
+        this.FONT_ROBOTO_BOLD    = Typeface.createFromAsset(context.getAssets(), ROBOTO_BOLD);
     }
 
     public Typeface bloated() {
@@ -95,5 +101,13 @@ public class Fonts extends AppCompatActivity {
 
     public Typeface robotoRegular() {
         return FONT_ROBOTO_REGULAR;
+    }
+
+    public Typeface robotoLight() {
+        return FONT_ROBOTO_LIGHT;
+    }
+
+    public Typeface robotoBold() {
+        return FONT_ROBOTO_BOLD;
     }
 }
