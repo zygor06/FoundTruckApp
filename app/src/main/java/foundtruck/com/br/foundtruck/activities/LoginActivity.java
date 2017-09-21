@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements FontInteface {
     @OnClick({R.id.btn_login, R.id.btn_facebook, R.id.btn_google_plus})
     public void login(){
         startActivity(new Intent(getApplicationContext(), InicioActivity.class));
+        //startActivity(new Intent(getApplicationContext(), CustomizedAndroidListActivity.class));
         this.overridePendingTransition(R.anim.slide_in_bottom, R.anim.slide_out_bottom);
         finish();
     }

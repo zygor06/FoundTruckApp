@@ -16,5 +16,6 @@
     <color name="google_plus">#DE5E53</color>
 
     <color name="black_alpha_40">#a0000000</color>
+    <color name="grey_text">#3D414A</color>
     <color name="light_grey">#b7b7b7</color>
 </resources>

@@ -11,9 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.044444446"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="16dp" />
+        app:layout_constraintGuide_percent="0.02" />
 
     <android.support.constraint.Guideline
         android:id="@+id/v_34"
@@ -38,18 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.95555556"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="344dp" />
-
-    <android.support.constraint.Guideline
-        android:id="@+id/h_57"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.57"
-        tools:layout_editor_absoluteY="323dp"
-        tools:layout_editor_absoluteX="0dp" />
+        app:layout_constraintGuide_percent="0.98" />
 
     <android.support.constraint.Guideline
         android:id="@+id/h_36"
@@ -92,27 +79,114 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.98"
-        tools:layout_editor_absoluteY="556dp"
+        app:layout_constraintGuide_percent="0.99"
+        tools:layout_editor_absoluteY="561dp"
         tools:layout_editor_absoluteX="0dp" />
 
     <!-- TODO: Update blank fragment layout -->
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/favoritos_detalhes"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/darker"
         app:layout_constraintBottom_toTopOf="@+id/h_46"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h_36"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" >
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.34"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.64"
+            tools:layout_editor_absoluteX="230dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.044444446"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95555556"
+            tools:layout_editor_absoluteX="344dp"
+            tools:layout_editor_absoluteY="25dp" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.93"
+            tools:layout_editor_absoluteY="78dp"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/tv_reviews"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_reviews"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline4"
+            app:layout_constraintRight_toLeftOf="@+id/guideline6" />
+
+        <TextView
+            android:id="@+id/tv_recomendacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_recomendacoes"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline3"
+            app:layout_constraintRight_toLeftOf="@+id/guideline4"
+            android:layout_marginBottom="1dp" />
+
+        <TextView
+            android:id="@+id/tv_favoritos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/tx_favoritos"
+            android:textAlignment="center"
+            android:textColor="@color/light_grey"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline8"
+            app:layout_constraintHorizontal_bias="0.515"
+            app:layout_constraintLeft_toLeftOf="@+id/guideline5"
+            app:layout_constraintRight_toLeftOf="@+id/guideline3" />
+
+    </android.support.constraint.ConstraintLayout>
 
     <ImageView
         android:id="@+id/fundo"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="@drawable/layout_padrao"
         app:layout_constraintBottom_toTopOf="@+id/h_36"
@@ -128,11 +202,22 @@
         android:layout_height="wrap_content"
         android:text="@string/txt_favoritos"
         android:textColor="@color/light_grey"
-        android:textSize="10sp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/h_53"
         app:layout_constraintLeft_toLeftOf="@+id/v_16dp_start"
         app:layout_constraintTop_toTopOf="@+id/h_46" />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/h_96"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/v_16dp_start"
+        app:layout_constraintRight_toLeftOf="@+id/v_16dp_end"
+        app:layout_constraintTop_toTopOf="@+id/h_53"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

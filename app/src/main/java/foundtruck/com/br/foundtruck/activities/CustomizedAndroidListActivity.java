@@ -1,13 +1,11 @@
-package foundtruck.com.br.foundtruck.fragments;
+package foundtruck.com.br.foundtruck.activities;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -16,19 +14,12 @@ import org.w3c.dom.NodeList;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
 import foundtruck.com.br.foundtruck.R;
 import foundtruck.com.br.foundtruck.adapters.FavoritoAdapter;
-import foundtruck.com.br.foundtruck.helper.FontInteface;
-import foundtruck.com.br.foundtruck.helper.Fonts;
 import foundtruck.com.br.foundtruck.helper.XmlParser;
 
-public class FavoritosFragment extends Fragment implements FontInteface{
-
-    //teste
-
+public class CustomizedAndroidListActivity extends Activity {
+    // All static variables
     static final String URL = "https://api.androidhive.info/music/music.xml";
     // XML node keys
     public static final String KEY_SONG = "song"; // parent node
@@ -38,41 +29,12 @@ public class FavoritosFragment extends Fragment implements FontInteface{
     public static final String KEY_DURATION = "duration";
     public static final String KEY_THUMB_URL = "thumb_url";
 
-    @BindView(R.id.list)
     ListView list;
     FavoritoAdapter adapter;
 
-    //fim teste
-
-
-    private Unbinder unbinder;
-
-    @BindView(R.id.txt_meus_favoritos)
-    TextView meusFavoritos;
-    @BindView(R.id.tv_favoritos)
-    TextView tvFavoritos;
-    @BindView(R.id.tv_recomendacoes)
-    TextView tvRecomendacoes;
-    @BindView(R.id.tv_reviews)
-    TextView tvReviews;
-
     @Override
-    public void onStart() {
-        super.onStart();
-    }
-
-    public FavoritosFragment() {
-        // Required empty public constructor
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_favoritos, container, false);
-        unbinder = ButterKnife.bind(this, view);
-        setFonts();
-
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
 
@@ -97,12 +59,14 @@ public class FavoritosFragment extends Fragment implements FontInteface{
             songsList.add(map);
         }
 
+        list=(ListView)findViewById(R.id.list);
+
         // Getting adapter by passing xml data ArrayList
-        adapter=new FavoritoAdapter(getActivity(), songsList);
+        adapter=new FavoritoAdapter(this, songsList);
         list.setAdapter(adapter);
 
         // Click event for single list row
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        list.setOnItemClickListener(new OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
@@ -110,23 +74,5 @@ public class FavoritosFragment extends Fragment implements FontInteface{
 
             }
         });
-
-
-
-        return view;
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        unbinder.unbind();
-    }
-
-    @Override
-    public void setFonts() {
-        meusFavoritos.setTypeface(new Fonts(getActivity()).signatureRegular());
-        tvFavoritos.setTypeface(new Fonts(getActivity()).chalkboardRegular());
-        tvRecomendacoes.setTypeface(new Fonts(getActivity()).chalkboardRegular());
-        tvReviews.setTypeface(new Fonts(getActivity()).chalkboardRegular());
     }
 }

@@ -25,4 +25,8 @@
     <string name="cadastro_texto">ENCONTRAR UM FOOD TRUCK NUNCA FOI TÃO FÁCIL !</string>
     <string name="title_activity_test">test</string>
     <string name="txt_favoritos">MEUS FAVORITOS</string>
+    <string name="tx_favoritos">FAVORITOS</string>
+    <string name="tx_recomendacoes">RECOMENDAÇÕES</string>
+    <string name="tx_reviews">REVIEWS</string>
+    <string name="title_activity_customized_android_list">CustomizedAndroidListActivity</string>
 </resources>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <dimen name="radius_input">30dp</dimen>
     <dimen name="input_height">40dp</dimen>
     <dimen name="button_height">40dp</dimen>
@@ -12,4 +12,7 @@
     <dimen name="text_14sp">14sp</dimen>
     <dimen name="text_36sp">36sp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="font_14sp">14sp</dimen>
+
+    <dimen name="design_fab_image_size" tools:override="true">36dp</dimen>
 </resources>

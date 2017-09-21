@@ -42,19 +42,19 @@ public class InicioActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.action_search:
-                    toolbar.setNavigationIcon(null);
+                    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
                     getTransaction().replace(R.id.content, new PesquisaFragment()).commit();
                     return true;
                 case R.id.action_favoritos:
-                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+                    toolbarShow();
                     getTransaction().replace(R.id.content, new FavoritosFragment()).commit();
                     return true;
                 case R.id.action_foodtrucks:
-                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+                    toolbarShow();
                     Toast.makeText(getApplicationContext(), "Foodtrucks", Toast.LENGTH_SHORT).show();
                     return true;
                 case R.id.action_locais:
-                    toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+                    toolbarShow();
                     Toast.makeText(getApplicationContext(), "Locais", Toast.LENGTH_SHORT).show();
                     return true;
             }
@@ -69,7 +69,7 @@ public class InicioActivity extends AppCompatActivity {
         setContentView(R.layout.activity_inicio);
         unbinder = ButterKnife.bind(this);
         setToolbar();
-        toolbar.setNavigationIcon(null);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
         getTransaction().replace(R.id.content, new PesquisaFragment()).commit();
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         disableShiftMode(navigation);
@@ -124,4 +124,10 @@ public class InicioActivity extends AppCompatActivity {
         toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
     }
+
+    public void toolbarShow(){
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationIcon(R.drawable.vtr_left_arrow);
+    }
+
 }

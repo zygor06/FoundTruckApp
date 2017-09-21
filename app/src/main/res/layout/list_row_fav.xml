@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginBottom="10dp">
+
+    <!-- ListRow à esquerda com Imagem -->
+
+    <LinearLayout
+        android:id="@+id/foodtruck_detalhe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/image_bg"
+        android:layout_marginRight="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/foodtruck_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:background="@drawable/burguer2"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/foodtruck_nome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/foodtruck_detalhe"
+        android:layout_toRightOf="@+id/foodtruck_detalhe"
+        android:text="BURGUER TRUCK"
+        android:textColor="@color/grey_text"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/foodtruck_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodtruck_nome"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/foodtruck_detalhe"
+        android:text="EM FUNCIONAMENTO"
+        />
+    <TextView
+        android:id="@+id/foodtruck_horario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodtruck_status"
+        android:textColor="@color/grey"
+        android:textSize="12sp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/foodtruck_detalhe"
+        android:text="12:00 - 22:00"
+        />
+
+    <TextView
+        android:id="@+id/foodtruck_endereco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/foodtruck_horario"
+        android:textColor="@color/grey"
+        android:textSize="13sp"
+        android:layout_marginTop="1dp"
+        android:layout_toRightOf="@+id/foodtruck_detalhe"
+        android:text="Quadra 108 Bloco A 45, Asa Sul"
+        />
+
+    <Button
+        android:id="@+id/foodtruck_avaliar"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/round_30dp"
+        android:text="AVALIAR"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        android:elevation="5dp"
+        android:backgroundTint="@color/colorAccent"
+        android:layout_alignBaseline="@+id/foodtruck_endereco"
+        android:layout_alignBottom="@+id/foodtruck_endereco"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/foodtruck_posicao"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        app:backgroundTint="@color/colorPrimary"
+        app:srcCompat="@drawable/vtr_map_location"
+        app:elevation="6dp"
+        android:layout_marginTop="0dp" />
+
+
+
+
+
+</RelativeLayout>
