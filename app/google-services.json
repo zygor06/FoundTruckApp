@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "406305040597",
+    "firebase_url": "https://foundtruckapp.firebaseio.com",
+    "project_id": "foundtruckapp",
+    "storage_bucket": "foundtruckapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406305040597:android:b12de65327c6acda",
+        "android_client_info": {
+          "package_name": "foundtruck.com.br.foundtruck"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406305040597-dqvhcbk4f5ob7dkfhkfu5sdg4sj2b0q7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "foundtruck.com.br.foundtruck",
+            "certificate_hash": "5932053d312e36d4875df8df9c03ed80013a1ddb"
+          }
+        },
+        {
+          "client_id": "406305040597-aas76gkmetbogd2du2k9r2uvfr3sslkt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaz8L8hvYNjbcW8PjDI-KjX4wwEQ-Ds1Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406305040597-aas76gkmetbogd2du2k9r2uvfr3sslkt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
